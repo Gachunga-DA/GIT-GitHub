@@ -1,0 +1,52 @@
+Arguments are values passed in a function when it is called. A function hence functions with these inputs. 
+When defining a fuction, parameters are defined with parenthesis. When a function is called, the values in the arguments that correspond to those in the paremeters are worked on. 
+For example; 
+def greet(name):
+  print(f'Hello, {name}'!)
+greet('Alice')
+
+In the above case, the function is defined with name as the parameter, when called, the argument that is passed through it is alice and hence returns an output. 
+In the above case, the output will be 
+Hello, Alice!
+
+Types of Arguments 
+1. Positional Arguments-These are assigned to the parameters present based on their position. 
+for example: 
+def add(a,b):
+  return a+b
+result=add (2,3)
+In teh above case, 2 is automatically assigned to a and 3 to b respectively
+
+2. Keyword Arguments
+Parameter names are passed alongside with the values allowing arguments to be passed in any order.  
+for example:
+def introduce(name,age):
+  print(f'My name is {name} and I am {age} years old')
+introduce name="bob", age=30
+
+3. Default Arguments 
+Here, default values are given to the parameters in the function. If values are not given when calling the function, the default values earlier indicated in the parameter are automatically assigned for execution. 
+For example:
+def greet(name='John'):
+  print(f'hello, {name})
+greet()
+From the above example, if another name is not defined in an argument, John is automatically returned as the default name
+
+4. Arbitrary Positional Arguments 
+This is used when you are not sure of the number of arguments that are being passed on the function stated earlier. Then, you use *args to help in accepting a variable number of positional arguments 
+def summarize(*numbers):
+    total = sum(numbers)
+    print(f"Sum: {total}")
+
+summarize(1, 2, 3)       # Sum: 6
+summarize(4, 5, 6, 7, 8) # Sum: 30
+
+5. Arbitrary Keyword Arguments
+**kwargs allows a function to accept an arbitrary number of keyword arguments.
+def display_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+display_info(name="Alice", age=28, city="New York")
+
+
